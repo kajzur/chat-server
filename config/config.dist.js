@@ -1,0 +1,14 @@
+{
+	"database" : {
+		"dbhost": "",
+		"dbport": "",
+		"dbusername": "",
+		"dbuserpass": "",
+		"dbname": ""
+	},
+	"redis" : {
+		"serverurl": "",
+		"serverport": "",
+		"prefix: "" 
+	}
+}
