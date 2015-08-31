@@ -19,6 +19,7 @@
   "dependencies" : {
 		"nodejs-websocket" : "latest",
 		"redis" : "latest",
-		"pg" : "latest"
+		"pg" : "latest",
+    "winston": "latest"
   }
 }

@@ -9,6 +9,9 @@
 	"redis" : {
 		"serverurl": "",
 		"serverport": "",
-		"prefix: "" 
+		"prefix": "" 
+	},
+	"app": {
+		"port": ""
 	}
 }
