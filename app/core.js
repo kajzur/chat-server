@@ -10,7 +10,13 @@ var onMessageReceive = function(str){
 	var message = Factory.Message.getFromJson(str);
 	var destinationChannel = utils.getDestinationChannelName(config, message.to, message.from);
 	logger.info("Publish message to channel "+destinationChannel);
-	redis.getRedisClient(config).publish(destinationChannel, JSON.stringify(message));
+	var res = redis.getRedisClient(config).publish(destinationChannel, JSON.stringify(message), function(){
+		var online = arguments[1] >= 1;
+		if(!online){
+			logger.info(destinationChannel + "receiver is not online")
+			//TO DO: HANDLE WHEN SOMEONE IS NOT ONLINE
+		}
+	});
 }
 
 var onClose = function(code, reason){

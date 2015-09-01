@@ -1,5 +1,5 @@
 var utils = require('../utils/utils');
-console.log(utils)
+
 function Message (txt,datetime,from,to) {
 	this.text = txt;
 	this.dateTime = datetime;
